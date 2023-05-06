@@ -1,7 +1,13 @@
 import 'package:get_it/get_it.dart';
 import '../services/todos.service.dart';
-final locator=GetIt.instance;
+import 'package:stacked/stacked_annotations.dart';
+import 'package:todo_mvvm/ui/todo_screen/todo_screen_view.dart';
 
-setupLocator(){
-  locator.registerLazySingleton(() => TodosService());
+@StackedApp(
+  routes: [MaterialRoute(page: TodosScreenView, initial: true)],
+  dependencies: [LazySingleton(classType: TodosService)],
+)
+class App {
+  // This class has no puporse besides housing the annotation that
+  // generates the required functionality.
 }

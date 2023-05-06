@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-import 'app/locator.dart';
+import 'app/locator.locator.dart';
 import 'models/todo.adapter.dart';
 import 'ui/todo_screen/todo_screen_view.dart';
 
